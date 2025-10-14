@@ -224,7 +224,7 @@
           <!-- Python -->
           <div class="flex flex-col items-center group">
             <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <i class="ri-python-fill text-4xl text-blue-600"></i>
+              <img src="/assets/python.png" alt="python" class="w-10 h-10">
             </div>
             <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Python</span>
           </div>
@@ -258,7 +258,7 @@
           <!-- Figma -->
           <div class="flex flex-col items-center group">
             <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <i class="ri-figma-fill text-4xl text-purple-500"></i>
+              <img src="/assets/figma.png" alt="figma" class="w-7 h-10">
             </div>
             <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Figma</span>
           </div>
@@ -531,7 +531,7 @@
     function bob(timestamp) {
       if (!start) start = timestamp;
       const progress = (timestamp - start) / 1000; // seconds
-      const y = Math.sin(progress * 2 * Math.PI) * 10; // amplitude 10px
+      const y = Math.sin(progress * 2 * Math.PI) * 3; // amplitude 10px
       text.style.transform = `translateY(${y}px)`;
       requestAnimationFrame(bob);
     }
