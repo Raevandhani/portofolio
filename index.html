@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professional Portfolio Website" />
+
+    <!-- LINKS -->
+    <link href="src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Portfolio - John Doe</title>
+
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 font-poppins transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300" x-data="{ isOpen: false }">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+            <span class="text-gray-800 dark:text-gray-200">John</span>Doe
+          </div>
+    
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8 items-center">
+            <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Home</a>
+            <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">About</a>
+            <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Skills</a>
+            <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Projects</a>
+            <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Contact</a>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <div class="flex items-center space-x-4">
+            <!-- Dark Mode Toggle for Mobile -->
+            <button id="theme-toggle-mobile" type="button" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+              <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+              <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+            </button>
+            
+            <button @click="isOpen = !isOpen" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none">
+              <i class="ri-menu-line text-2xl" x-show="!isOpen"></i>
+              <i class="ri-close-line text-2xl" x-show="isOpen"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div x-show="isOpen" x-transition class="md:hidden mt-4 pb-4">
+          <a href="#home" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Home</a>
+          <a href="#about" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">About</a>
+          <a href="#skills" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Skills</a>
+          <a href="#projects" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Projects</a>
+          <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4">
+              Hi, I'm <span class="text-indigo-600 dark:text-indigo-400">John Doe</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
+              Full Stack Developer
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+              I'm passionate about creating beautiful, functional web applications that solve real-world problems. 
+              With expertise in modern web technologies, I bring ideas to life through clean code and thoughtful design.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#contact" class="px-8 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-300">
+                Get In Touch
+              </a>
+              <a href="#projects" class="px-8 py-3 border-2 border-indigo-600 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-all duration-300">
+                View My Work
+              </a>
+            </div>
+            <div class="flex space-x-4 mt-8">
+              <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
+                <i class="ri-github-fill text-2xl"></i>
+              </a>
+              <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
+                <i class="ri-linkedin-box-fill text-2xl"></i>
+              </a>
+              <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
+                <i class="ri-twitter-fill text-2xl"></i>
+              </a>
+              <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
+                <i class="ri-dribbble-line text-2xl"></i>
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <div class="relative">
+              <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-100 dark:border-indigo-900 shadow-xl">
+                <img src="https://picsum.photos/seed/profile123/800/800.jpg" alt="Profile" class="w-full h-full object-cover">
+              </div>
+              <div class="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
+                <div class="flex items-center">
+                  <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mr-3">
+                    <i class="ri-code-s-slash-line text-indigo-600 dark:text-indigo-400 text-xl"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Experience</p>
+                    <p class="font-semibold text-gray-800 dark:text-gray-200">5+ Years</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+          About <span class="text-indigo-600 dark:text-indigo-400">Me</span>
+        </h2>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <img src="https://picsum.photos/seed/about456/600/400.jpg" alt="About Me" class="rounded-lg shadow-lg">
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Full Stack Developer & UI/UX Enthusiast</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+              I'm a passionate developer with a keen eye for design and a love for creating seamless user experiences. 
+              With over 5 years of experience in web development, I've worked on a variety of projects ranging from 
+              small business websites to complex web applications.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              My approach combines technical expertise with creative problem-solving to deliver solutions that not 
+              only look great but also perform exceptionally well. I'm constantly learning and exploring new 
+              technologies to stay at the forefront of web development.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Name:</p>
+                <p class="font-semibold text-gray-800 dark:text-gray-200">John Doe</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Email:</p>
+                <p class="font-semibold text-gray-800 dark:text-gray-200">john@example.com</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">From:</p>
+                <p class="font-semibold text-gray-800 dark:text-gray-200">San Francisco, CA</p>
+              </div>
+              <div>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Available:</p>
+                <p class="font-semibold text-green-600 dark:text-green-400">Freelance</p>
+              </div>
+            </div>
+            <a href="#" class="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">
+              <span>Download CV</span>
+              <i class="ri-download-line ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+          My <span class="text-indigo-600 dark:text-indigo-400">Skills</span>
+        </h2>
+        <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          <!-- HTML -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-html5-fill text-4xl text-orange-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">HTML5</span>
+          </div>
+          
+          <!-- CSS -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-css3-fill text-4xl text-blue-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">CSS3</span>
+          </div>
+          
+          <!-- JavaScript -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-javascript-fill text-4xl text-yellow-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">JavaScript</span>
+          </div>
+          
+          <!-- React -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-reactjs-fill text-4xl text-cyan-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">React</span>
+          </div>
+          
+          <!-- Vue -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-vuejs-fill text-4xl text-green-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Vue.js</span>
+          </div>
+          
+          <!-- Node.js -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-nodejs-fill text-4xl text-green-600"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Node.js</span>
+          </div>
+          
+          <!-- Python -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-python-fill text-4xl text-blue-600"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Python</span>
+          </div>
+          
+          <!-- Tailwind -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#06B6D4"/>
+              </svg>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Tailwind</span>
+          </div>
+          
+          <!-- MongoDB -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-database-2-fill text-4xl text-green-700"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MongoDB</span>
+          </div>
+          
+          <!-- Git -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-git-branch-fill text-4xl text-red-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Git</span>
+          </div>
+          
+          <!-- Figma -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-figma-fill text-4xl text-purple-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Figma</span>
+          </div>
+          
+          <!-- Docker -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-ship-fill text-4xl text-blue-400"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Docker</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-gray-800" x-data="{ activeFilter: 'all', showAll: false }">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+          My <span class="text-indigo-600 dark:text-indigo-400">Projects</span>
+        </h2>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <button @click="activeFilter = 'all'"
+                  :class="activeFilter === 'all' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+                  class="px-6 py-2 rounded-full transition-colors duration-300">
+            All
+          </button>
+          <button @click="activeFilter = 'web'"
+                  :class="activeFilter === 'web' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+                  class="px-6 py-2 rounded-full transition-colors duration-300">
+            Web Apps
+          </button>
+          <button @click="activeFilter = 'mobile'"
+                  :class="activeFilter === 'mobile' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+                  class="px-6 py-2 rounded-full transition-colors duration-300">
+            Mobile
+          </button>
+          <button @click="activeFilter = 'design'"
+                  :class="activeFilter === 'design' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+                  class="px-6 py-2 rounded-full transition-colors duration-300">
+            Design
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64">
+              <img src="https://picsum.photos/seed/project1/600/400.jpg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                  <p class="text-sm">A full-featured online shopping platform with payment integration</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">React</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Node.js</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">MongoDB</span>
+              </div>
+              <div class="flex justify-between">
+                <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">
+                  <i class="ri-eye-line mr-1"></i> Preview
+                </a>
+                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" x-data="{ category: 'mobile' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64">
+              <img src="https://picsum.photos/seed/project2/600/400.jpg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-xl font-semibold mb-2">Fitness Tracker App</h3>
+                  <p class="text-sm">Mobile app for tracking workouts and nutrition</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">React Native</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Firebase</span>
+              </div>
+              <div class="flex justify-between">
+                <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">
+                  <i class="ri-eye-line mr-1"></i> Preview
+                </a>
+                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" x-data="{ category: 'design' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64">
+              <img src="https://picsum.photos/seed/project3/600/400.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-xl font-semibold mb-2">Brand Identity Design</h3>
+                  <p class="text-sm">Complete brand identity package for a tech startup</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Figma</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Illustrator</span>
+              </div>
+              <div class="flex justify-between">
+                <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">
+                  <i class="ri-eye-line mr-1"></i> Preview
+                </a>
+                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full text-center mt-12">
+          <a href="/projects">
+            <button class="px-8 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-300 inline-flex items-center">
+              See All
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+          Get In <span class="text-indigo-600 dark:text-indigo-400">Touch</span>
+        </h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200">Let's Connect</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-6">
+                  I'm always interested in hearing about new projects and opportunities. 
+                  Whether you have a question or just want to say hi, feel free to get in touch!
+                </p>
+                <div class="space-y-4">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mr-4">
+                      <i class="ri-map-pin-line text-indigo-600 dark:text-indigo-400"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">Location</p>
+                      <p class="font-medium text-gray-800 dark:text-gray-200">San Francisco, CA</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mr-4">
+                      <i class="ri-mail-line text-indigo-600 dark:text-indigo-400"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">Email</p>
+                      <p class="font-medium text-gray-800 dark:text-gray-200">john@example.com</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mr-4">
+                      <i class="ri-phone-line text-indigo-600 dark:text-indigo-400"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">Phone</p>
+                      <p class="font-medium text-gray-800 dark:text-gray-200">+1 (555) 123-4567</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex space-x-4 mt-8">
+                  <a href="#" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-colors duration-300">
+                    <i class="ri-github-fill"></i>
+                  </a>
+                  <a href="#" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-colors duration-300">
+                    <i class="ri-linkedin-box-fill"></i>
+                  </a>
+                  <a href="#" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-colors duration-300">
+                    <i class="ri-twitter-fill"></i>
+                  </a>
+                  <a href="#" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-colors duration-300">
+                    <i class="ri-dribbble-line"></i>
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200">Send Me a Message</h3>
+                <form x-data="{ name: '', email: '', subject: '', message: '', submitted: false }" @submit.prevent="submitted = true">
+                  <div class="mb-4">
+                    <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
+                    <input type="text" id="name" x-model="name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400" required>
+                  </div>
+                  <div class="mb-4">
+                    <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">Your Email</label>
+                    <input type="email" id="email" x-model="email" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400" required>
+                  </div>
+                  <div class="mb-4">
+                    <label for="subject" class="block text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                    <input type="text" id="subject" x-model="subject" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400" required>
+                  </div>
+                  <div class="mb-6">
+                    <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                    <textarea id="message" rows="4" x-model="message" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400" required></textarea>
+                  </div>
+                  <button type="submit" class="w-full px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-300">
+                    Send Message
+                  </button>
+                  <div x-show="submitted" x-transition class="mt-4 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg">
+                    Thank you for your message! I'll get back to you soon.
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-white py-8">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <p>&copy; 2023 John Doe. All rights reserved.</p>
+          </div>
+          <div class="flex space-x-6">
+            <a href="#home" class="hover:text-indigo-400 transition-colors duration-300">Home</a>
+            <a href="#about" class="hover:text-indigo-400 transition-colors duration-300">About</a>
+            <a href="#skills" class="hover:text-indigo-400 transition-colors duration-300">Skills</a>
+            <a href="#projects" class="hover:text-indigo-400 transition-colors duration-300">Projects</a>
+            <a href="#contact" class="hover:text-indigo-400 transition-colors duration-300">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-indigo-700 dark:hover:bg-indigo-600 z-40">
+      <i class="ri-arrow-up-line text-xl"></i>
+    </button>
+  </body>
+  
+  <!-- JS -->
+  <script src="src/main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    src="https://kit.fontawesome.com/fb890e3537.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+  ></script>
+  
+  <script>
+    // Theme toggle functionality
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const themeToggleDarkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
+    const themeToggleLightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
+
+    // Change the icons inside the button based on previous settings
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      themeToggleLightIcon.classList.remove('hidden');
+      themeToggleDarkIcon.classList.add('hidden');
+      themeToggleLightIconMobile.classList.remove('hidden');
+      themeToggleDarkIconMobile.classList.add('hidden');
+    } else {
+      themeToggleDarkIcon.classList.remove('hidden');
+      themeToggleLightIcon.classList.add('hidden');
+      themeToggleDarkIconMobile.classList.remove('hidden');
+      themeToggleLightIconMobile.classList.add('hidden');
+    }
+
+    themeToggleBtn.addEventListener('click', function() {
+      // Toggle icons
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      themeToggleDarkIconMobile.classList.toggle('hidden');
+      themeToggleLightIconMobile.classList.toggle('hidden');
+
+      // If set via local storage previously
+      if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+        }
+      } else {
+        // If not in local storage
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+        }
+      }
+    });
+
+    themeToggleBtnMobile.addEventListener('click', function() {
+      // Toggle icons
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      themeToggleDarkIconMobile.classList.toggle('hidden');
+      themeToggleLightIconMobile.classList.toggle('hidden');
+
+      // If set via local storage previously
+      if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+        }
+      } else {
+        // If not in local storage
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+        }
+      }
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.remove('opacity-0', 'invisible');
+        backToTopButton.classList.add('opacity-100', 'visible');
+      } else {
+        backToTopButton.classList.add('opacity-0', 'invisible');
+        backToTopButton.classList.remove('opacity-100', 'visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const sections = document.querySelectorAll('section');
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 100)) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('text-indigo-600', 'dark:text-indigo-400');
+        if (link.getAttribute('href').slice(1) === current) {
+          link.classList.add('text-indigo-600', 'dark:text-indigo-400');
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('nav');
+      if (window.scrollY > 10) {
+        navbar.classList.add('shadow-md');
+      } else {
+        navbar.classList.remove('shadow-md');
+      }
+    });
+  </script>
+</html>
