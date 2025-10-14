@@ -110,7 +110,7 @@
           <div class="flex items-center justify-center">
             <div class="relative">
               <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-100 dark:border-indigo-900 shadow-xl">
-                <img src="assets/hong-kong.jpeg" alt="Profile" class="w-full h-full object-cover">
+                <img src="assets/pepan.jpg" alt="Profile" class="w-full h-full object-cover">
               </div>
               <div class="absolute bottom-3 right-6 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
                 <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center">
@@ -125,42 +125,36 @@
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white dark:bg-gray-800">
-      <div class="container mx-auto px-6">
+      <div class="container mx-auto px-40">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
           About <span class="text-indigo-600 dark:text-indigo-400">Me</span>
         </h2>
-        <div class="flex flex-col md:flex-row items-center gap-12">
-          <div class="md:w-1/2">
-            <img src="https://picsum.photos/seed/about456/600/400.jpg" alt="About Me" class="rounded-lg shadow-lg">
+        <div class="flex flex-col md:flex-row items-center justify-content-between">
+          <div class="md:w-1/2 text-center text-9xl">
+            <h1 id="bobbing-text" class="text-gray-800 dark:text-gray-50">
+              <<span class="text-indigo-600">/</span>>
+            </h1>
           </div>
           <div class="md:w-1/2">
-            <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Full Stack Developer & UI/UX Enthusiast</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Web Developer & Game Enthusiast</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm">
               I'm a passionate developer with a keen eye for design and a love for creating seamless user experiences. 
               With over 5 years of experience in web development, I've worked on a variety of projects ranging from 
               small business websites to complex web applications.
             </p>
-            <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+            <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-sm">
               My approach combines technical expertise with creative problem-solving to deliver solutions that not 
               only look great but also perform exceptionally well. I'm constantly learning and exploring new 
               technologies to stay at the forefront of web development.
             </p>
             <div class="grid grid-cols-2 gap-4 mb-6">
               <div>
-                <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Name:</p>
-                <p class="font-semibold text-gray-800 dark:text-gray-200">John Doe</p>
-              </div>
-              <div>
                 <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Email:</p>
-                <p class="font-semibold text-gray-800 dark:text-gray-200">john@example.com</p>
+                <p class="font-semibold text-gray-800 dark:text-gray-200">raevandhani@gmail.com</p>
               </div>
               <div>
                 <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">From:</p>
-                <p class="font-semibold text-gray-800 dark:text-gray-200">San Francisco, CA</p>
-              </div>
-              <div>
-                <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Available:</p>
-                <p class="font-semibold text-green-600 dark:text-green-400">Freelance</p>
+                <p class="font-semibold text-gray-800 dark:text-gray-200">Bogor, Indonesia</p>
               </div>
             </div>
             <a href="#" class="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">
@@ -531,54 +525,18 @@
   ></script>
   
   <script>
-    // Theme toggle functionality
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
-    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-    const themeToggleDarkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
-    const themeToggleLightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
+    const text = document.getElementById('bobbing-text');
+    let start = null;
 
-    // Change the icons inside the button based on previous settings
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      themeToggleLightIcon.classList.remove('hidden');
-      themeToggleDarkIcon.classList.add('hidden');
-      themeToggleLightIconMobile.classList.remove('hidden');
-      themeToggleDarkIconMobile.classList.add('hidden');
-    } else {
-      themeToggleDarkIcon.classList.remove('hidden');
-      themeToggleLightIcon.classList.add('hidden');
-      themeToggleDarkIconMobile.classList.remove('hidden');
-      themeToggleLightIconMobile.classList.add('hidden');
+    function bob(timestamp) {
+      if (!start) start = timestamp;
+      const progress = (timestamp - start) / 1000; // seconds
+      const y = Math.sin(progress * 2 * Math.PI) * 10; // amplitude 10px
+      text.style.transform = `translateY(${y}px)`;
+      requestAnimationFrame(bob);
     }
 
-    themeToggleBtn.addEventListener('click', function() {
-      // Toggle icons
-      themeToggleDarkIcon.classList.toggle('hidden');
-      themeToggleLightIcon.classList.toggle('hidden');
-      themeToggleDarkIconMobile.classList.toggle('hidden');
-      themeToggleLightIconMobile.classList.toggle('hidden');
-
-      // If set via local storage previously
-      if (localStorage.getItem('color-theme')) {
-        if (localStorage.getItem('color-theme') === 'light') {
-          document.documentElement.classList.add('dark');
-          localStorage.setItem('color-theme', 'dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-          localStorage.setItem('color-theme', 'light');
-        }
-      } else {
-        // If not in local storage
-        if (document.documentElement.classList.contains('dark')) {
-          document.documentElement.classList.remove('dark');
-          localStorage.setItem('color-theme', 'light');
-        } else {
-          document.documentElement.classList.add('dark');
-          localStorage.setItem('color-theme', 'dark');
-        }
-      }
-    });
+    requestAnimationFrame(bob);
 
     themeToggleBtnMobile.addEventListener('click', function() {
       // Toggle icons
