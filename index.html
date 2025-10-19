@@ -36,10 +36,10 @@
   <body class="bg-gray-50 dark:bg-gray-900 font-poppins transition-colors duration-300">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300" x-data="{ isOpen: false }">
+    <nav class="fixed top-0 w-full bg-white dark:bg-slate-900 shadow-sm z-50 transition-all duration-300" x-data="{ isOpen: false }">
       <div class="w-full">
         <div class="w-full flex justify-between items-center px-5 md:px-8 py-2 md:py-4 border-b border-gray-200 dark:border-gray-700">
-          <div class="text-lg xs:text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+          <div class="text-lg lg:text-2xl font-bold text-indigo-600 dark:text-indigo-400">
             <span class="text-gray-800 dark:text-gray-200">Raevan</span>dhani
           </div>
     
@@ -49,7 +49,7 @@
             <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">About</a>
             <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Skills</a>
             <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Projects</a>
-            <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Achievements</a>
+            <a href="#achievements" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Achievements</a>
             <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Contact</a>
           </div>
           
@@ -76,27 +76,31 @@
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center pt-20 bg-gray-50 dark:bg-gray-900">
       <div class="w-full">
-        <div class="flex flex-col md:flex-row items-center justify-between px-12 lg:px-40">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between px-12 xl:px-40">
           <div class="md:w-1/2 mb-10 md:mb-0">
-            <h1 class="text-5xl lg:text-6xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+            <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800 dark:text-gray-100 mb-2">
               Hi, I'm <span class="text-indigo-600 dark:text-indigo-400">Raevandhani</span>
             </h1>
-            <h2 class="text-xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-3">
+            <h2 class="text-xl xl:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-3">
               Developer
             </h2>
-            <p class="text-gray-600 dark:text-gray-400 mb-5 lg:mb-8 leading-relaxed text-sm sm:text-xs">
+            <p class="text-gray-600 dark:text-gray-400 mb-5 lg:mb-6 xl:mb-8 leading-snug lg:leading-relaxed text-xs xl:text-sm text-justify">
               I'm passionate about creating beautiful, functional web applications that solve real-world problems. 
               With expertise in modern web technologies, I bring innovative ideas to life through clean code and thoughtful design.
             </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="#contact" class="px-8 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-300">
-                Get In Touch
+            <div class="flex flex-wrap gap-3 lg:gap-4">
+              <a href="#contact">
+                <button class="px-5 lg:px-8 py-3 text-sm bg-indigo-600 dark:bg-indigo-500 text-white rounded-full hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-300">
+                  Get In Touch
+                </button>
               </a>
-              <a href="#projects" class="px-8 py-3 border-2 border-indigo-600 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-all duration-300">
-                View My Work
+              <a href="#projects">
+                <button class="px-5 lg:px-8 py-3 text-sm border-2 border-indigo-600 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-all duration-300">
+                  View My Work
+                </button>
               </a>
             </div>
-            <div class="flex space-x-4 mt-5 lg:mt-8">
+            <div class="flex space-x-4 mt-5 lg:mt-6 xl:mt-8">
               <a href="https://github.com/Raevandhani" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
                 <i class="ri-github-fill text-2xl"></i>
               </a>
@@ -106,15 +110,18 @@
               <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
                 <i class="ri-instagram-fill text-2xl"></i>
               </a>
+              <a href="https://wa.me/6288801317841" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
+                <i class="ri-whatsapp-fill text-2xl"></i>
+              </a>
             </div>
           </div>
 
           <div class="flex items-center justify-center">
             <div class="relative">
-              <div class="w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-indigo-100 dark:border-indigo-900 shadow-xl">
+              <div class="mb-8 w-64 h-64 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-indigo-100 dark:border-indigo-900 shadow-xl">
                 <img src="assets/pepan.jpg" alt="Profile" class="w-full h-full object-cover">
               </div>
-              <div class="absolute bottom-3 right-6 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
+              <div class="absolute bottom-10 right-4 md:bottom-3 md:right-6 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
                 <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center">
                   <i class="ri-code-s-slash-line text-indigo-600 dark:text-indigo-400 text-xl"></i>
                 </div>
@@ -126,23 +133,23 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white dark:bg-gray-800">
-      <div class="container mx-auto px-40">
+    <section id="about" class="pt-24 pb-32 bg-white dark:bg-slate-900 border-y border-gray-200 dark:border-gray-700">
+      <div class="w-full px-40">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-white">
           About <span class="text-indigo-600 dark:text-indigo-400">Me</span>
         </h2>
         <div class="flex flex-col md:flex-row items-center justify-content-between">
           <div class="md:w-1/2 text-center text-9xl">
             <h1 id="bobbing-text" class="text-gray-800 dark:text-gray-50 mb-28">
-              <<span class="text-indigo-600">/</span>>
+              <span class="drop-shadow-[0_0_5px_#000000] dark:drop-shadow-[0_0_3px_#ffffff]"><</span><span class="text-indigo-600 drop-shadow-[0_0_5px_#4F39F6] dark:drop-shadow-[0_0_5px_#4F39F6]">/</span><span class="drop-shadow-[0_0_5px_#000000] dark:drop-shadow-[0_0_3px_#ffffff]">></span>
             </h1>
           </div>
           <div class="md:w-1/2">
-            <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Web Developer & Game Enthusiast</h3>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Web & Game Developer Enthusiast</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm text-justify">
               I'm a passionate developer with a keen eye for design and a love for creating seamless user experiences. 
-              With over 5 years of experience in web development, I've worked on a variety of projects ranging from 
-              small business websites to complex web applications.
+              With 2 years of experience in web development, I've worked on a variety of projects ranging from 
+              small projects to complex web applications.
             </p>
             <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-sm text-justify">
               My approach combines technical expertise with creative problem-solving to deliver solutions that not 
@@ -159,28 +166,28 @@
                 <p class="font-semibold text-gray-800 dark:text-gray-200 text-sm">Bogor, Indonesia</p>
               </div>
             </div>
-            <a href="#" class="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 hover:underline">
+            <a href="/public/CV_Raevandhani.pdf" download="CV_Raevandhani.pdf" class="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 hover:underline">
               <span>Download CV</span>
               <i class="ri-download-line ml-2"></i>
-            </a>
+            </a>  
           </div>
         </div>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900">
-      <div class="container mx-auto px-6">
+    <section id="skills" class="pt-24 pb-32 bg-gray-50 dark:bg-gray-900">
+      <div class="w-full px-6">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-white">
           My <span class="text-indigo-600 dark:text-indigo-400">Skills</span>
         </h2>
-        <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <div class="w-1/2 grid grid-cols-3 md:grid-cols-4 gap-8 mx-auto">
           <!-- HTML -->
           <div class="flex flex-col items-center group">
             <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
               <i class="ri-html5-fill text-4xl text-orange-500"></i>
             </div>
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">HTML5</span>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">HTML</span>
           </div>
           
           <!-- CSS -->
@@ -188,7 +195,7 @@
             <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
               <i class="ri-css3-fill text-4xl text-blue-500"></i>
             </div>
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">CSS3</span>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">CSS</span>
           </div>
           
           <!-- JavaScript -->
@@ -207,47 +214,21 @@
             <span class="text-sm font-medium text-gray-700 dark:text-gray-300">React</span>
           </div>
           
-          <!-- Vue -->
+          <!-- Laravel -->
           <div class="flex flex-col items-center group">
             <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <i class="ri-vuejs-fill text-4xl text-green-500"></i>
+              <img src="/assets/laravel.png" alt="laravel" class="w-10 h-10">
             </div>
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Vue.js</span>
-          </div>
-          
-          <!-- Node.js -->
-          <div class="flex flex-col items-center group">
-            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <i class="ri-nodejs-fill text-4xl text-green-600"></i>
-            </div>
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Node.js</span>
-          </div>
-          
-          <!-- Python -->
-          <div class="flex flex-col items-center group">
-            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <img src="/assets/python.png" alt="python" class="w-10 h-10">
-            </div>
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Python</span>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Laravel</span>
           </div>
           
           <!-- Tailwind -->
           <div class="flex flex-col items-center group">
             <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#06B6D4"/>
-              </svg>
+              <img src="/assets/tailwind.png" alt="tailwind" class="w-10 h-6">
             </div>
             <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Tailwind</span>
-          </div>
-          
-          <!-- MongoDB -->
-          <div class="flex flex-col items-center group">
-            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <i class="ri-database-2-fill text-4xl text-green-700"></i>
-            </div>
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MongoDB</span>
-          </div>
+          </div>  
           
           <!-- Git -->
           <div class="flex flex-col items-center group">
@@ -264,48 +245,122 @@
             </div>
             <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Figma</span>
           </div>
-          
-          <!-- Docker -->
-          <div class="flex flex-col items-center group">
-            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <i class="ri-ship-fill text-4xl text-blue-400"></i>
-            </div>
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Docker</span>
-          </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white dark:bg-gray-800" x-data="{ activeFilter: 'all', showAll: false }">
-      <div class="container mx-auto px-6">
+    <section id="projects" class="py-20 bg-white dark:bg-slate-900 border-y border-gray-200 dark:border-gray-700">
+      <div class="w-full px-40">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-white">
           My <span class="text-indigo-600 dark:text-indigo-400">Projects</span>
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
-          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-800 hover:cursor-pointer">
             <div class="relative overflow-hidden h-64">
-              <img src="https://picsum.photos/seed/project1/600/400.jpg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+              <img src="assets/web/foodie.jpeg" alt="Project 1" class="w-full object-top transition-transform duration-500 hover:scale-110">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div class="p-6 text-white">
-                  <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
-                  <p class="text-sm">A full-featured online shopping platform with payment integration</p>
+                  <h3 class="text-base font-semibold mb-1 text-white">Foodie</h3>
+                  <p class="text-xs text-justify leading-tight">A modern restaurant website design showcasing menus, services, and contact details</p>
                 </div>
               </div>
             </div>
-            <div class="p-6">
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">React</span>
-                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Node.js</span>
-                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">MongoDB</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">HTML</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">CSS</span>
               </div>
               <div class="flex justify-between">
-                <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">
+                <a href="https://raevandhani.github.io/Foodie" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 text-sm hover:underline">
                   <i class="ri-eye-line mr-1"></i> Preview
                 </a>
-                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
+                <a href="https://github.com/Raevandhani/Foodie " class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-800 hover:cursor-pointer">
+            <div class="relative overflow-hidden h-64">
+              <img src="assets/web/exprohotel.jpeg" alt="Project 1" class="w-full object-top transition-transform duration-500 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-base font-semibold mb-1 text-white">ExproHotel</h3>
+                  <p class="text-xs text-justify leading-tight">A hotel website application that enables users to browse and book rooms seamlessly.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">HTML</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">CSS</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">PHP</span>
+              </div>
+              <div class="flex justify-end">
+                <!-- <a href="https://github.com/Raevandhani/Foodie" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-eye-line mr-1"></i> Preview
+                </a> -->
+                <a href="https://github.com/Raevandhani/ExproHotel" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-800 hover:cursor-pointer">
+            <div class="relative overflow-hidden h-64">
+              <img
+                id="animatedImage"
+                src="assets/web/library-management.png"
+                alt="Project 1"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-base font-semibold mb-1 text-white">Library Management</h3>
+                  <p class="text-xs text-justify leading-tight">A library management application that helps users manage books, borrowers, and lending history efficiently.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Laravel</span>
+              </div>
+              <div class="flex justify-end">
+                <!-- <a href="https://github.com/Raevandhani/Foodie" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-eye-line mr-1"></i> Preview
+                </a> -->
+                <a href="https://github.com/Raevandhani/LibraryManagement" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-800 hover:cursor-pointer">
+            <div class="relative overflow-hidden h-64">
+              <img src="assets/web/finance.jpeg" alt="Project 1" class="w-full object-top transition-transform duration-500 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-base font-semibold mb-1 text-white">Finance</h3>
+                  <p class="text-xs text-justify leading-tight">A gateway to reliable financial data, market trends, and expert-driven analysis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">HTML</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">CSS</span>
+              </div>
+              <div class="flex justify-between">
+                <a href="https://raevandhani.github.io/Finance" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-eye-line mr-1"></i> Preview
+                </a>
+                <a href="https://github.com/Raevandhani/Finance" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 text-sm hover:underline">
                   <i class="ri-github-fill mr-1"></i> Code
                 </a>
               </div>
@@ -325,7 +380,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">x
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-white">
           Get In <span class="text-indigo-600 dark:text-indigo-400">Touch</span>
@@ -466,7 +521,7 @@
 
     requestAnimationFrame(bob);
 
-    // Smooth scrolling for navigation links
+    // smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -480,6 +535,27 @@
       });
     });
 
+    // image animation
+    const img = document.getElementById('animatedImage');
+
+    let startTime = null;
+    const duration = 10000;
+
+    function animate(timestamp) {
+      if (!startTime) startTime = timestamp;
+
+      const elapsed = timestamp - startTime;
+      const progress = (elapsed % duration) / duration;
+
+      const position = (Math.sin(progress * 2 * Math.PI) + 1) / 2 * 100;
+    
+      img.style.objectPosition = `${position}% center`;
+    
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+
+    // back to top
     const backToTopButton = document.getElementById('backToTop');
     
     window.addEventListener('scroll', () => {
@@ -499,6 +575,7 @@
       });
     });
 
+    // nav color when scroll
     window.addEventListener('scroll', () => {
       let current = '';
       const sections = document.querySelectorAll('section');

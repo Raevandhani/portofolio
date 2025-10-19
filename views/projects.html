@@ -34,31 +34,27 @@
 
   </head>
   <body class="bg-gray-50 dark:bg-gray-900 font-poppins transition-colors duration-300">
+
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300" x-data="{ isOpen: false }">
-      <div class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-          <div class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+    <nav class="fixed top-0 w-full bg-white dark:bg-slate-900 shadow-sm z-50 transition-all duration-300" x-data="{ isOpen: false }">
+      <div class="w-full">
+        <div class="w-full flex justify-between items-center px-5 md:px-8 py-2 md:py-4 border-b border-gray-200 dark:border-gray-700">
+          <div class="text-lg lg:text-2xl font-bold text-indigo-600 dark:text-indigo-400">
             <span class="text-gray-800 dark:text-gray-200">Raevan</span>dhani
           </div>
     
           <!-- Desktop Menu -->
-          <div class="hidden md:flex space-x-8 items-center">
-            <a href="../index.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Home</a>
-            <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">About</a>
-            <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Skills</a>
-            <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Projects</a>
-            <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Contact</a>
+          <div class="hidden md:flex space-x-5 md:space-x-6 items-center text-sm">
+            <a href="../index.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Home</a>
+            <a href="../index.html#about" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">About</a>
+            <a href="../index.html#skills" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Skills</a>
+            <a href="projects.html" class="text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 underline">Projects</a>
+            <a href="../index.html#achievements" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Achievements</a>
+            <a href="../index.html#contact" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Contact</a>
           </div>
           
           <!-- Mobile Menu Button -->
-          <div class="flex items-center space-x-4">
-            <!-- Dark Mode Toggle for Mobile -->
-            <button id="theme-toggle-mobile" type="button" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-              <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-              <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
-            </button>
-            
+          <div class="items-center space-x-4 flex md:hidden">
             <button @click="isOpen = !isOpen" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none">
               <i class="ri-menu-line text-2xl" x-show="!isOpen"></i>
               <i class="ri-close-line text-2xl" x-show="isOpen"></i>
@@ -67,155 +63,155 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div x-show="isOpen" x-transition class="md:hidden mt-4 pb-4">
-          <a href="#home" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Home</a>
-          <a href="#about" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">About</a>
-          <a href="#skills" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Skills</a>
-          <a href="#projects" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Projects</a>
-          <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">Contact</a>
+        <div x-show="isOpen" x-transition class="md:hidden mt-3 pb-4 px-5 border-b border-gray-200 dark:border-gray-700">
+          <a href="#home" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 hover:underline">Home</a>
+          <a href="#about" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 hover:underline">About</a>
+          <a href="#skills" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 hover:underline">Skills</a>
+          <a href="#projects" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 hover:underline">Projects</a>
+          <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 hover:underline">Contact</a>
         </div>
       </div>
     </nav>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white dark:bg-gray-800" x-data="{ activeFilter: 'all', showAll: false }">
-      <div class="container mx-auto px-6">
+    <section id="projects" class="py-20 bg-white dark:bg-gray-900 mt-10" x-data="{ activeFilter: 'all' }">
+      <div class="w-full px-40">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-white">
           My <span class="text-indigo-600 dark:text-indigo-400">Projects</span>
         </h2>
 
         <div class="flex flex-wrap justify-center gap-4 mb-12">
           <button @click="activeFilter = 'all'"
-                  :class="activeFilter === 'all' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+                  :class="activeFilter === 'all' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-800 dark:hover:bg-indigo-400 text-gray-700 dark:text-gray-200'"
                   class="px-6 py-2 rounded-full transition-colors duration-300">
             All
           </button>
           <button @click="activeFilter = 'web'"
-                  :class="activeFilter === 'web' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+                  :class="activeFilter === 'web' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-800 dark:hover:bg-indigo-400 text-gray-700 dark:text-gray-200'"
                   class="px-6 py-2 rounded-full transition-colors duration-300">
             Web Apps
           </button>
           <button @click="activeFilter = 'mobile'"
-                  :class="activeFilter === 'mobile' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+                  :class="activeFilter === 'mobile' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-800 dark:hover:bg-indigo-400 text-gray-700 dark:text-gray-200'"
                   class="px-6 py-2 rounded-full transition-colors duration-300">
             Mobile
           </button>
           <button @click="activeFilter = 'design'"
-                  :class="activeFilter === 'design' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'"
+                  :class="activeFilter === 'design' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-800 dark:hover:bg-indigo-400 text-gray-700 dark:text-gray-200'"
                   class="px-6 py-2 rounded-full transition-colors duration-300">
             Design
           </button>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
-          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
             <div class="relative overflow-hidden h-64">
-              <img src="https://picsum.photos/seed/project1/600/400.jpg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+              <img src="../assets/web/foodie.jpeg" alt="foodie" class="w-full object-top transition-transform duration-500 hover:scale-110">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div class="p-6 text-white">
-                  <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
-                  <p class="text-sm">A full-featured online shopping platform with payment integration</p>
+                  <h3 class="text-base font-semibold mb-1 text-white">Foodie</h3>
+                  <p class="text-xs text-justify leading-tight">A modern restaurant website design showcasing menus, services, and contact details</p>
                 </div>
               </div>
             </div>
-            <div class="p-6">
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">React</span>
-                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Node.js</span>
-                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">MongoDB</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">HTML</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">CSS</span>
               </div>
               <div class="flex justify-between">
-                <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">
+                <a href="https://raevandhani.github.io/Foodie" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 text-sm hover:underline">
                   <i class="ri-eye-line mr-1"></i> Preview
                 </a>
-                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
+                <a href="https://github.com/Raevandhani/Foodie " class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 text-sm hover:underline">
                   <i class="ri-github-fill mr-1"></i> Code
                 </a>
               </div>
             </div>
           </div>
-        
-          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" x-data="{ category: 'mobile' }" x-show="activeFilter === 'all' || activeFilter === category">
-            <div class="relative overflow-hidden h-64">
-              <img src="https://picsum.photos/seed/project2/600/400.jpg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div class="p-6 text-white">
-                  <h3 class="text-xl font-semibold mb-2">Fitness Tracker App</h3>
-                  <p class="text-sm">Mobile app for tracking workouts and nutrition</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">React Native</span>
-                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Firebase</span>
-              </div>
-              <div class="flex justify-between">
-                <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">
-                  <i class="ri-eye-line mr-1"></i> Preview
-                </a>
-                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
-                  <i class="ri-github-fill mr-1"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
-        
-          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2" x-data="{ category: 'design' }" x-show="activeFilter === 'all' || activeFilter === category">
-            <div class="relative overflow-hidden h-64">
-              <img src="https://picsum.photos/seed/project3/600/400.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div class="p-6 text-white">
-                  <h3 class="text-xl font-semibold mb-2">Brand Identity Design</h3>
-                  <p class="text-sm">Complete brand identity package for a tech startup</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Figma</span>
-                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Illustrator</span>
-              </div>
-              <div class="flex justify-between">
-                <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300">
-                  <i class="ri-eye-line mr-1"></i> Preview
-                </a>
-                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300">
-                  <i class="ri-github-fill mr-1"></i> Code
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="w-full text-center mt-12">
-          <a href="/projects">
-            <button class="px-8 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-300 inline-flex items-center">
-              See All
-            </button>
-          </a>
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">  
+            <div class="relative overflow-hidden h-64">
+              <img src="../assets/web/exprohotel.jpeg" alt="exprohotel" class="w-full object-top transition-transform duration-500 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-base font-semibold mb-1 text-white">ExproHotel</h3>
+                  <p class="text-xs text-justify leading-tight">A hotel website application that enables users to browse and book rooms seamlessly.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">HTML</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">CSS</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">PHP</span>
+              </div>
+              <div class="flex justify-end">
+                <!-- <a href="https://github.com/Raevandhani/Foodie" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-eye-line mr-1"></i> Preview
+                </a> -->
+                <a href="https://github.com/Raevandhani/ExproHotel" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64">
+              <img src="../assets/web/library-management.png" alt="library-management" class="w-full h-full object-cover"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-base font-semibold mb-1 text-white">Library Management</h3>
+                  <p class="text-xs text-justify leading-tight">A library management application that helps users manage books, borrowers, and lending history efficiently.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Laravel</span>
+              </div>
+              <div class="flex justify-end">
+                <!-- <a href="https://github.com/Raevandhani/Foodie" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-eye-line mr-1"></i> Preview
+                </a> -->
+                <a href="https://github.com/Raevandhani/LibraryManagement" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64">
+              <img src="../assets/web/finance.jpeg" alt="finance" class="w-full object-top transition-transform duration-500 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-base font-semibold mb-1 text-white">Finance</h3>
+                  <p class="text-xs text-justify leading-tight">A gateway to reliable financial data, market trends, and expert-driven analysis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">HTML</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">CSS</span>
+              </div>
+              <div class="flex justify-between">
+                <a href="https://raevandhani.github.io/Finance" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-eye-line mr-1"></i> Preview
+                </a>
+                <a href="https://github.com/Raevandhani/Finance" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300 text-sm hover:underline">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 dark:bg-black text-white py-2">
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-4 md:mb-0 text-xs">
-            <p>&copy; 2023 John Doe. All rights reserved.</p>
-          </div>
-          <div class="flex space-x-6 text-sm">
-            <a href="#home" class="hover:text-indigo-400 transition-colors duration-300">Home</a>
-            <a href="#about" class="hover:text-indigo-400 transition-colors duration-300">About</a>
-            <a href="#skills" class="hover:text-indigo-400 transition-colors duration-300">Skills</a>
-            <a href="#projects" class="hover:text-indigo-400 transition-colors duration-300">Projects</a>
-            <a href="#contact" class="hover:text-indigo-400 transition-colors duration-300">Contact</a>
-          </div>
-        </div>
-      </div>
-    </footer>
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-indigo-700 dark:hover:bg-indigo-600 z-40">
