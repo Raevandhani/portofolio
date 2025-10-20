@@ -49,7 +49,7 @@
             <a href="../index.html#about" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">About</a>
             <a href="../index.html#skills" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Skills</a>
             <a href="projects.html" class="text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 underline">Projects</a>
-            <a href="../index.html#achievements" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Achievements</a>
+            <a href="achievements.html" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Achievements</a>
             <a href="../index.html#contact" class="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Contact</a>
           </div>
           
@@ -212,12 +212,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-indigo-700 dark:hover:bg-indigo-600 z-40">
-        <i class="ri-arrow-up-line text-xl"></i>
-      </button>
-    </body>
   
     <!-- JS -->
     <script src="src/main.js"></script>
@@ -232,107 +226,6 @@
     </script>
   
     <script>
-    const text = document.getElementById('bobbing-text');
-    let start = null;
 
-    function bob(timestamp) {
-      if (!start) start = timestamp;
-      const progress = (timestamp - start) / 1000; // seconds
-      const y = Math.sin(progress * 2 * Math.PI) * 3; // amplitude 10px
-      text.style.transform = `translateY(${y}px)`;
-      requestAnimationFrame(bob);
-    }
-
-    requestAnimationFrame(bob);
-
-    themeToggleBtnMobile.addEventListener('click', function() {
-      // Toggle icons
-      themeToggleDarkIcon.classList.toggle('hidden');
-      themeToggleLightIcon.classList.toggle('hidden');
-      themeToggleDarkIconMobile.classList.toggle('hidden');
-      themeToggleLightIconMobile.classList.toggle('hidden');
-
-      // If set via local storage previously
-      if (localStorage.getItem('color-theme')) {
-        if (localStorage.getItem('color-theme') === 'light') {
-          document.documentElement.classList.add('dark');
-          localStorage.setItem('color-theme', 'dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-          localStorage.setItem('color-theme', 'light');
-        }
-      } else {
-        // If not in local storage
-        if (document.documentElement.classList.contains('dark')) {
-          document.documentElement.classList.remove('dark');
-          localStorage.setItem('color-theme', 'light');
-        } else {
-          document.documentElement.classList.add('dark');
-          localStorage.setItem('color-theme', 'dark');
-        }
-      }
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    const backToTopButton = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.remove('opacity-0', 'invisible');
-        backToTopButton.classList.add('opacity-100', 'visible');
-      } else {
-        backToTopButton.classList.add('opacity-0', 'invisible');
-        backToTopButton.classList.remove('opacity-100', 'visible');
-      }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      const sections = document.querySelectorAll('section');
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 100)) {
-          current = section.getAttribute('id');
-        }
-      });
-      
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('text-indigo-600', 'dark:text-indigo-400');
-        if (link.getAttribute('href').slice(1) === current) {
-          link.classList.add('text-indigo-600', 'dark:text-indigo-400');
-        }
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      const navbar = document.querySelector('nav');
-      if (window.scrollY > 10) {
-        navbar.classList.add('shadow-md');
-      } else {
-        navbar.classList.remove('shadow-md');
-      }
-    });
     </script>
 </html>
