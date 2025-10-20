@@ -30,6 +30,20 @@
     <!-- Apple -->
     <link rel="apple-touch-icon" href="/assets/favicon.png">
 
+    <!-- Style -->
+     <style>
+      .hide-scrollbar {
+          /* Hide scrollbar for IE, Edge and Firefox */
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+      
+      .hide-scrollbar::-webkit-scrollbar {
+          /* Hide scrollbar for Chrome, Safari and Opera */
+          display: none;
+      }
+     </style>
+
     <title>Raevandhani</title>
 
   </head>
@@ -138,24 +152,24 @@
 
     <!-- About Section -->
     <section id="about" class="pt-24 pb-32 bg-white dark:bg-slate-900 border-y border-gray-200 dark:border-gray-700">
-      <div class="w-full px-40">
+      <div class="w-full px-12 xl:px-40">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-white">
           About <span class="text-indigo-600 dark:text-indigo-400">Me</span>
         </h2>
         <div class="flex flex-col md:flex-row items-center justify-content-between">
-          <div class="md:w-1/2 text-center text-9xl">
-            <h1 id="bobbing-text" class="text-gray-800 dark:text-gray-50 mb-28">
+          <div class="md:w-1/2 text-center text-8xl lg:text-9xl">
+            <h1 id="bobbing-text" class="text-gray-800 dark:text-gray-50 mb-20 md:mb-28">
               <span class="drop-shadow-[0_0_5px_#000000] dark:drop-shadow-[0_0_3px_#ffffff]"><</span><span class="text-indigo-600 drop-shadow-[0_0_5px_#4F39F6] dark:drop-shadow-[0_0_5px_#4F39F6]">/</span><span class="drop-shadow-[0_0_5px_#000000] dark:drop-shadow-[0_0_3px_#ffffff]">></span>
             </h1>
           </div>
           <div class="md:w-1/2">
-            <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Web & Game Developer Enthusiast</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm text-justify">
+            <h3 class="text-lg lg:text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Web & Game Developer Enthusiast</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-xs lg:text-sm text-justify">
               I'm a passionate developer with a keen eye for design and a love for creating seamless user experiences. 
               With 2 years of experience in web development, I've worked on a variety of projects ranging from 
               small projects to complex web applications.
             </p>
-            <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-sm text-justify">
+            <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-xs lg:text-sm text-justify">
               My approach combines technical expertise with creative problem-solving to deliver solutions that not 
               only look great but also perform exceptionally well. I'm constantly learning and exploring new 
               technologies to stay at the forefront of web development.
@@ -163,11 +177,11 @@
             <div class="grid grid-cols-2 gap-4 mb-6">
               <div>
                 <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Email:</p>
-                <p class="font-semibold text-gray-800 dark:text-gray-200 text-sm">raevandhani@gmail.com</p>
+                <p class="font-semibold text-gray-800 dark:text-gray-200 text-xs lg:text-sm">raevandhani@gmail.com</p>
               </div>
               <div>
                 <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">From:</p>
-                <p class="font-semibold text-gray-800 dark:text-gray-200 text-sm">Bogor, Indonesia</p>
+                <p class="font-semibold text-gray-800 dark:text-gray-200 text-xs lg:text-sm">Bogor, Indonesia</p>
               </div>
             </div>
             <a href="downloads/CV_Raevandhani.pdf" download="CV_Raevandhani.pdf" class="inline-flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300 hover:underline">
@@ -181,11 +195,11 @@
 
     <!-- Skills Section -->
     <section id="skills" class="pt-24 pb-32 bg-gray-50 dark:bg-gray-900">
-      <div class="w-full px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-white">
+      <div class="w-full px-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-center pb-20 dark:text-white">
           My <span class="text-indigo-600 dark:text-indigo-400">Skills</span>
         </h2>
-        <div class="w-1/2 grid grid-cols-3 md:grid-cols-4 gap-8 mx-auto">
+        <div class="w-4/5 md:w-2/3 xl:w-1/2 hidden sm:grid grid-cols-4 gap-8 mx-auto">
           <!-- HTML -->
           <div class="flex flex-col items-center group">
             <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
@@ -250,17 +264,84 @@
             <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Figma</span>
           </div>
         </div>
+
+        <div class="flex sm:hidden overflow-x-auto gap-6 hide-scrollbar mb-5">
+          <!-- HTML -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-html5-fill text-4xl text-orange-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">HTML</span>
+          </div>
+          
+          <!-- CSS -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-css3-fill text-4xl text-blue-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">CSS</span>
+          </div>
+          
+          <!-- JavaScript -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-javascript-fill text-4xl text-yellow-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">JavaScript</span>
+          </div>
+          
+          <!-- React -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-reactjs-fill text-4xl text-cyan-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">React</span>
+          </div>
+        </div>
+
+        <div class="flex sm:hidden overflow-x-auto gap-6 hide-scrollbar">
+          <!-- Laravel -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <img src="/assets/laravel.png" alt="laravel" class="w-10 h-10">
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Laravel</span>
+          </div>
+          
+          <!-- Tailwind -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <img src="/assets/tailwind.png" alt="tailwind" class="w-10 h-6">
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Tailwind</span>
+          </div>  
+          
+          <!-- Git -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <i class="ri-git-branch-fill text-4xl text-red-500"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Git</span>
+          </div>
+           
+          <!-- Figma -->
+          <div class="flex flex-col items-center group">
+            <div class="w-20 h-20 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
+              <img src="/assets/figma.png" alt="figma" class="w-7 h-10">
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Figma</span>
+          </div>
       </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-white dark:bg-slate-900 border-y border-gray-200 dark:border-gray-700">
-      <div class="w-full px-40">
+      <div class="w-full px-12 lg:px-40">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-white">
           My <span class="text-indigo-600 dark:text-indigo-400">Projects</span>
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         
           <div class="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-800 hover:cursor-pointer">
             <div class="relative overflow-hidden h-64">
