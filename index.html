@@ -21,16 +21,17 @@
       rel="stylesheet"
     />
 
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="/assets/favicon.png" sizes="32x32">
-
     <!-- Android -->
     <link rel="icon" type="image/png" href="/assets/favicon.png" sizes="192x192">
-
     <!-- Apple -->
     <link rel="apple-touch-icon" href="/assets/favicon.png">
 
-    <!-- Style -->
+    <!-- STYLE -->
      <style>
       .hide-scrollbar {
           /* Hide scrollbar for IE, Edge and Firefox */
@@ -52,38 +53,111 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white dark:bg-slate-900 shadow-sm z-50 transition-all duration-300" x-data="{ isOpen: false }">
       <div class="w-full">
-        <div class="w-full flex justify-between items-center px-5 md:px-8 py-2 md:py-4 border-b border-gray-200 dark:border-gray-700">
+        <div class="w-full flex justify-between items-center px-5 md:px-8 py-2 md:py-3 border-b border-gray-200 dark:border-gray-700">
           <div class="text-lg lg:text-2xl font-bold text-indigo-600 dark:text-indigo-400">
             <span class="text-gray-800 dark:text-gray-200">Raevan</span>dhani
           </div>
     
           <!-- Desktop Menu -->
           <div class="hidden md:flex space-x-5 md:space-x-6 items-center text-sm">
-            <a href="index.html" class="text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 underline">Home</a>
-            <a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">About</a>
-            <a href="#skills" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Skills</a>
-            <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Projects</a>
-            <a href="views/achievements.html" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Achievements</a>
-            <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300 hover:underline">Contact</a>
+            <a href="/"
+               class="relative nav-link text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300
+                      after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full">
+              Home
+            </a>
+          
+            <a href="#about"
+               class="relative nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300
+                      after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-indigo-600 after:transition-all after:duration-300 hover:after:w-full">
+              About
+            </a>
+          
+            <a href="#skills"
+               class="relative nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300
+                      after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-indigo-600 after:transition-all after:duration-300 hover:after:w-full">
+              Skills
+            </a>
+          
+            <a href="#projects"
+               class="relative nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300
+                      after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-indigo-600 after:transition-all after:duration-300 hover:after:w-full">
+              Projects
+            </a>
+          
+            <a href="views/achievements.html"
+               class="relative nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300
+                      after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-indigo-600 after:transition-all after:duration-300 hover:after:w-full">
+              Achievements
+            </a>
+          
+            <a href="#contact"
+               class="relative nav-link text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-500 transition-colors duration-300
+                      after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:w-0 after:h-[2px] after:bg-indigo-600 after:transition-all after:duration-300 hover:after:w-full">
+              Contact
+            </a>
           </div>
           
           <!-- Mobile Menu Button -->
           <div class="items-center space-x-4 flex md:hidden">
             <button @click="isOpen = !isOpen" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none">
-              <i class="ri-menu-line text-2xl" x-show="!isOpen"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-8 py-1" x-show="!isOpen">
+                <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75Zm7 10.5a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1-.75-.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd" />
+              </svg>
               <i class="ri-close-line text-2xl" x-show="isOpen"></i>
             </button>
           </div>
         </div>
         
-        <!-- Mobile Menu -->
-        <div x-show="isOpen" x-transition class="md:hidden mt-3 pb-4 px-5 border-b border-gray-200 dark:border-gray-700">
-          <a href="#home" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 hover:underline">Home</a>
-          <a href="#about" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 hover:underline">About</a>
-          <a href="#skills" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 hover:underline">Skills</a>
-          <a href="#projects" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 hover:underline">Projects</a>
-          <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300 hover:underline">Contact</a>
-        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <!-- <div x-show="isOpen" class="bg-black/30 w-full h-screen absolute"></div> -->
+      <div
+        x-show="isOpen"
+        x-transition:enter="transform transition ease-out duration-300"
+        x-transition:enter-start="-translate-x-full opacity-0"
+        x-transition:enter-end="translate-x-0 opacity-100"
+        x-transition:leave="transform transition ease-in duration-200"
+        x-transition:leave-start="translate-x-0 opacity-100"
+        x-transition:leave-end="-translate-x-full opacity-0"
+        class="md:hidden border-r border-gray-200 dark:border-gray-700/50 bg-white dark:bg-slate-900 shadow-md absolute top-10.5 left-0 w-full h-screen z-50 pt-4 px-1 space-y-1 text-gray-700 dark:text-gray-300"
+      >
+        <a href="index.html" class="flex items-center gap-2 py-2 px-5 bg-white/10 rounded" @click="isOpen = !isOpen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z" clip-rule="evenodd" />
+          </svg>
+          <h6 class="text-base text-gray-700 dark:text-gray-300">Home</h6>
+        </a>
+        <a href="#about" class="flex items-center gap-2 py-2 px-5 active:bg-white/10 rounded" @click="isOpen = !isOpen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z" clip-rule="evenodd" />
+          </svg>
+          <h6 class="text-base text-gray-700 dark:text-gray-300">About</h6>
+        </a>
+        <a href="#skills" class="flex items-center gap-2 py-2 px-5 active:bg-white/10 rounded" @click="isOpen = !isOpen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M16.403 12.652a3 3 0 0 0 0-5.304 3 3 0 0 0-3.75-3.751 3 3 0 0 0-5.305 0 3 3 0 0 0-3.751 3.75 3 3 0 0 0 0 5.305 3 3 0 0 0 3.75 3.751 3 3 0 0 0 5.305 0 3 3 0 0 0 3.751-3.75Zm-2.546-4.46a.75.75 0 0 0-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
+          </svg>
+          <h6 class="text-base text-gray-700 dark:text-gray-300">Skills</h6>
+        </a>
+        <a href="#projects" class="flex items-center gap-2 py-2 px-5 active:bg-white/10 rounded" @click="isOpen = !isOpen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25Zm4.03 6.28a.75.75 0 0 0-1.06-1.06L4.97 9.47a.75.75 0 0 0 0 1.06l2.25 2.25a.75.75 0 0 0 1.06-1.06L6.56 10l1.72-1.72Zm4.5-1.06a.75.75 0 1 0-1.06 1.06L13.44 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06l2.25-2.25a.75.75 0 0 0 0-1.06l-2.25-2.25Z" clip-rule="evenodd" />
+          </svg>
+          <h6 class="text-base text-gray-700 dark:text-gray-300">Projects</h6>
+        </a>
+        <a href="views/achievements.html" class="flex items-center gap-2 py-2 px-5 active:bg-white/10 rounded" @click="isOpen = !isOpen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd" />
+          </svg>
+          <h6 class="text-base text-gray-700 dark:text-gray-300">Achievements</h6>
+        </a>
+        <a href="#contact" class="flex items-center gap-3 py-2 px-5 active:bg-white/10 rounded" @click="isOpen = !isOpen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd" />
+          </svg>
+          <h6 class="text-base text-gray-700 dark:text-gray-300">Contact</h6>
+        </a>
       </div>
     </nav>
 
@@ -466,7 +540,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
-      <div class="container mx-auto px-6">
+      <div class="hidden sm:block container mx-auto px-6">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-white">
           Get In <span class="text-indigo-600 dark:text-indigo-400">Touch</span>
         </h2>
@@ -556,6 +630,102 @@
           </div>
         </div>
       </div>
+
+      <div class="block sm:hidden container mx-auto px-6 mb-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-white">
+          Get In <span class="text-indigo-600 dark:text-indigo-400">Touch</span>
+        </h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-xl font-semibold mb-5 text-gray-800 dark:text-gray-200">Let's Connect</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-5 text-sm w-full text-justify">
+                  I'm always interested in hearing about new projects and opportunities. 
+                  Whether you have a question or just want to say hi, feel free to get touched!
+                </p>
+                <div class="space-y-4">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mr-4">
+                      <i class="ri-map-pin-line text-indigo-600 dark:text-indigo-400"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs text-gray-500 dark:text-gray-400">Location</p>
+                      <p class="text-sm font-medium text-gray-800 dark:text-gray-200">Bogor, Indonesia</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mr-4">
+                      <i class="ri-mail-line text-indigo-600 dark:text-indigo-400"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs text-gray-500 dark:text-gray-400">Email</p>
+                      <p class="text-sm font-medium text-gray-800 dark:text-gray-200">raevandhani@gmail.com</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mr-4">
+                      <i class="ri-phone-line text-indigo-600 dark:text-indigo-400"></i>
+                    </div>
+                    <div>
+                      <p class="text-xs text-gray-500 dark:text-gray-400">Phone</p>
+                      <p class="text-sm font-medium text-gray-800 dark:text-gray-200">+62 888-0131-7841</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex space-x-5 mt-8">
+                  <a href="https://github.com/Raevandhani" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-colors duration-300">
+                    <i class="ri-github-fill"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/raevandhanifattan" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-colors duration-300">
+                    <i class="ri-linkedin-box-fill"></i>
+                  </a>
+                  <a href="https://www.instagram.com/raevandhani/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-colors duration-300">
+                    <i class="ri-instagram-fill"></i>
+                  </a>
+                  <a href="https://wa.me/6288801317841" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-colors duration-300">
+                    <i class="ri-whatsapp-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="block sm:hidden container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200">Send Me a Message</h3>
+            <form action="https://formsubmit.co/b777fbf32de691279311e9838fb0fa42" method="POST">
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2 text-sm">Your Name</label>
+                <input type="text" id="name" name="name" class="text-sm w-full px-3 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400" required>
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2 text-sm">Your Email</label>
+                <input type="email" id="email" name="email" class="text-sm w-full px-3 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400" required>
+              </div>
+              <div class="mb-4">
+                <label for="subject" class="block text-gray-700 dark:text-gray-300 mb-2 text-sm">Subject</label>
+                <input type="text" id="subject" name="subject" class="text-sm w-full px-3 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400" required>
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2 text-sm">Message</label>
+                <textarea id="message" rows="4" name="msg" class="text-sm w-full px-3 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400" required></textarea>
+              </div>
+
+              <!-- FormSubmit Extra -->
+              <input type="hidden" name="_cc" value="raevandhanifattan.itxpro@gmail.com">
+              <input type="hidden" name="_template" value="table">
+              <button type="submit" class="text-sm w-full px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-300">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- Back to Top Button -->
@@ -575,103 +745,4 @@
     defer
     src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
   ></script>
-  
-  <script>
-    const text = document.getElementById('bobbing-text');
-    let start = null;
-
-    function bob(timestamp) {
-      if (!start) start = timestamp;
-      const progress = (timestamp - start) / 1000; // seconds
-      const y = Math.sin(progress * 2 * Math.PI) * 3; // amplitude 10px
-      text.style.transform = `translateY(${y}px)`;
-      requestAnimationFrame(bob);
-    }
-
-    requestAnimationFrame(bob);
-
-    // smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // image animation
-    const img = document.getElementById('animatedImage');
-
-    let startTime = null;
-    const duration = 10000;
-
-    function animate(timestamp) {
-      if (!startTime) startTime = timestamp;
-
-      const elapsed = timestamp - startTime;
-      const progress = (elapsed % duration) / duration;
-
-      const position = (Math.sin(progress * 2 * Math.PI) + 1) / 2 * 100;
-    
-      img.style.objectPosition = `${position}% center`;
-    
-      requestAnimationFrame(animate);
-    }
-    requestAnimationFrame(animate);
-
-    // back to top
-    const backToTopButton = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.remove('opacity-0', 'invisible');
-        backToTopButton.classList.add('opacity-100', 'visible');
-      } else {
-        backToTopButton.classList.add('opacity-0', 'invisible');
-        backToTopButton.classList.remove('opacity-100', 'visible');
-      }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    // nav color when scroll
-    window.addEventListener('scroll', () => {
-      let current = '';
-      const sections = document.querySelectorAll('section');
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 100)) {
-          current = section.getAttribute('id');
-        }
-      });
-      
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('text-indigo-400', 'dark:text-indigo-300');
-        if (link.getAttribute('href').slice(1) === current) {
-          link.classList.add('text-indigo-400', 'dark:text-indigo-300');
-        }
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      const navbar = document.querySelector('nav');
-      if (window.scrollY > 10) {
-        navbar.classList.add('shadow-md');
-      } else {
-        navbar.classList.remove('shadow-md');
-      }
-    });
-  </script>
 </html>
