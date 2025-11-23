@@ -145,10 +145,10 @@
                   class="px-6 py-2 rounded-full transition-colors duration-300">
             Mobile
           </button>
-          <button @click="activeFilter = 'design'"
-                  :class="activeFilter === 'design' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-800 dark:hover:bg-indigo-400 text-gray-700 dark:text-gray-200'"
+          <button @click="activeFilter = 'ui/ux'"
+                  :class="activeFilter === 'ui/ux' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-800 dark:hover:bg-indigo-400 text-gray-700 dark:text-gray-200'"
                   class="px-6 py-2 rounded-full transition-colors duration-300">
-            Design
+            UI/UX Design
           </button>
           <button @click="activeFilter = 'games'"
                   :class="activeFilter === 'games' ? 'bg-indigo-600 dark:bg-indigo-500 text-white' : 'bg-gray-200 dark:bg-gray-800 dark:hover:bg-indigo-400 text-gray-700 dark:text-gray-200'"
@@ -162,9 +162,12 @@
           <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
             <div class="relative overflow-hidden h-64 m-1 rounded-md">
               <img src="../assets/web/foodie.jpeg" alt="foodie" class="w-full object-top transition-transform duration-500 hover:scale-110">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div class="absolute top-0 right-0 bg-blue-500 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
+                Website
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div class="p-6 text-white">
-                  <h3 class="text-base font-semibold mb-1 text-white">Foodie</h3>
+                  <h3 class="text-lg text-white font-bold mb-1">Foodie</h3>
                   <p class="text-xs text-justify leading-tight">A modern restaurant website design showcasing menus, services, and contact details</p>
                 </div>
               </div>
@@ -175,10 +178,10 @@
                 <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">CSS</span>
               </div>
               <div class="grid grid-cols-2 gap-2 mt-2">
-                <a href="https://github.com/Raevandhani/Foodie" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
+                <a href="https://github.com/Raevandhani/Foodie" target="_blank" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
                   <i class="ri-github-fill mr-1"></i> Code
                 </a>
-                <a href="https://raevandhani.github.io/Foodie" class="text-center bg-indigo-600 hover:bg-indigo-800 py-2 rounded-md text-white transition-all duration-300 font-semibold">
+                <a href="https://raevandhani.github.io/Foodie" target="_blank" class="text-center bg-indigo-600 hover:bg-indigo-800 py-2 rounded-md text-white transition-all duration-300 font-semibold">
                   <i class="ri-eye-line mr-1"></i> Preview
                 </a>
               </div>
@@ -188,9 +191,12 @@
           <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">  
             <div class="relative overflow-hidden h-64 m-1 rounded-md">
               <img src="../assets/web/exprohotel.jpeg" alt="exprohotel" class="w-full object-top transition-transform duration-500 hover:scale-110">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div class="absolute top-0 right-0 bg-blue-500 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
+                Website
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div class="p-6 text-white">
-                  <h3 class="text-base font-semibold mb-1 text-white">ExproHotel</h3>
+                  <h3 class="text-lg text-white font-bold mb-1">ExproHotel</h3>
                   <p class="text-xs text-justify leading-tight">A hotel website application that enables users to browse and book rooms seamlessly.</p>
                 </div>
               </div>
@@ -202,7 +208,7 @@
                 <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">PHP</span>
               </div>
               <div class="grid grid-cols-1 mt-2">
-                <a href="https://github.com/Raevandhani/ExproHotel" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
+                <a href="https://github.com/Raevandhani/ExproHotel" target="_blank" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
                   <i class="ri-github-fill mr-1"></i> Code
                 </a>
               </div>
@@ -212,9 +218,12 @@
           <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
             <div class="relative overflow-hidden h-64 m-1 rounded-md">
               <img src="../assets/web/library-management.png" alt="library-management" class="w-full h-full object-cover"/>
+              <div class="absolute top-0 right-0 bg-blue-500 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
+                Website
+              </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div class="p-6 text-white">
-                  <h3 class="text-base font-semibold mb-1 text-white">Library Management</h3>
+                  <h3 class="text-lg text-white font-bold mb-1">Library Management</h3>
                   <p class="text-xs text-justify leading-tight">A library management application that helps users manage books, borrowers, and lending history efficiently.</p>
                 </div>
               </div>
@@ -225,7 +234,7 @@
                 <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Tailwind CSS</span>
               </div>
               <div class="grid grid-cols-1 mt-2">
-                <a href="https://github.com/Raevandhani/LibraryManagement" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
+                <a href="https://github.com/Raevandhani/LibraryManagement" target="_blank" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
                   <i class="ri-github-fill mr-1"></i> Code
                 </a>
               </div>
@@ -238,9 +247,9 @@
               <div class="absolute top-0 right-0 bg-blue-500 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
                 Website
               </div>
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div class="p-6 text-white">
-                  <h3 class="text-base font-semibold mb-1 text-white">Finance</h3>
+                  <h3 class="text-lg text-white font-bold mb-1">Finance</h3>
                   <p class="text-xs text-justify leading-tight">A gateway to reliable financial data, market trends, and expert-driven analysis.</p>
                 </div>
               </div>
@@ -251,10 +260,191 @@
                 <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">CSS</span>
               </div>
               <div class="grid grid-cols-2 gap-2 mt-2">
-                <a href="https://github.com/Raevandhani/Finance" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
+                <a href="https://github.com/Raevandhani/Finance" target="_blank" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
                   <i class="ri-github-fill mr-1"></i> Code
                 </a>
-                <a href="https://raevandhani.github.io/Finance" class="text-center bg-indigo-600 hover:bg-indigo-800 py-2 rounded-md text-white transition-all duration-300 font-semibold">
+                <a href="https://raevandhani.github.io/Finance" target="_blank" class="text-center bg-indigo-600 hover:bg-indigo-800 py-2 rounded-md text-white transition-all duration-300 font-semibold">
+                  <i class="ri-eye-line mr-1"></i> Preview
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64 m-1 rounded-md">
+              <img src="../assets/web/pengaduan-siswa.jpeg" alt="finance" class="w-full h-full object-cover object-left">
+              <div class="absolute top-0 right-0 bg-blue-500 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
+                Website
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-lg text-white font-bold mb-1">Pengaduan Siswa</h3>
+                  <p class="text-xs text-justify leading-tight">A simple web platform for students to submit and track complaints.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Laravel</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Tailwind CSS</span>
+              </div>
+              <div class="grid grid-cols-1 gap-2 mt-2">
+                <a href="https://github.com/Raevandhani/PengaduanSiswa" target="_blank" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'games' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64 m-1 rounded-md">
+              <img src="../assets/games/pixelhop.png" alt="finance" class="w-full h-full object-cover object-left">
+              <div class="absolute top-0 right-0 bg-fuchsia-700 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
+                Mobile
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-lg text-white font-bold mb-1">PixelHop</h3>
+                  <p class="text-xs text-justify leading-tight">A simple platformer games where you collect fruits and make it to the end!</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Godot</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">GDScript</span>
+              </div>
+              <div class="grid grid-cols-1 gap-2 mt-2">
+                <a href="https://github.com/Raevandhani/PixelHop" target="_blank" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'mobile' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64 m-1 rounded-md">
+              <img src="../assets/placeholder.jpg" alt="finance" class="w-full h-full object-cover object-left">
+              <div class="absolute top-0 right-0 bg-emerald-700 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
+                Mobile
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-lg text-white font-bold mb-1">MoodTracker</h3>
+                  <p class="text-xs text-justify leading-tight">A lightweight app for recording your mood and understanding your emotional patterns.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">React Native</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Laravel</span>
+              </div>
+              <div class="grid grid-cols-1 gap-2 mt-2">
+                <a href="https://github.com/Raevandhani/MoodTracker" target="_blank" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64 m-1 rounded-md">
+              <img src="../assets/web/beasiswaxpress.jpeg" alt="finance" class="w-full h-full object-fit">
+              <div class="absolute top-0 right-0 bg-blue-500 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
+                Website
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-lg text-white font-bold mb-1">BeasiswaXpress</h3>
+                  <p class="text-xs text-justify leading-tight">A simple website that helps students find, apply, and manage scholarships quickly, making educational opportunities more accessible than ever.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Laravel</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Tailwind CSS</span>
+              </div>
+              <div class="grid grid-cols-1 gap-2 mt-2">
+                <a href="https://github.com/Raevandhani/BeasiswaXpress" target="_blank" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64 m-1 rounded-md">
+              <img src="../assets/web/inventaris-smkpesat.jpg" alt="finance" class="w-full h-full object-cover object-left">
+              <div class="absolute top-0 right-0 bg-blue-500 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
+                Website
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-lg text-white font-bold mb-1">Inventory System - SMK Pesat</h3>
+                  <p class="text-xs text-justify leading-tight">A School Inventory System that tracks assets, manages supplies, and simplifies resource management efficiently.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Laravel</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Tailwind CSS</span>
+              </div>
+              <div class="grid grid-cols-1 gap-2 mt-2">
+                <a href="https://github.com/Raevandhani/inventaris-smkpesat" target="_blank" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'web' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64 m-1 rounded-md">
+              <img src="../assets/web/kiwiadventures.jpeg" alt="finance" class="w-full h-full object-cover object-top">
+              <div class="absolute top-0 right-0 bg-blue-500 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
+                Website
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-lg text-white font-bold mb-1">KiwiAdventures</h3>
+                  <p class="text-xs text-justify leading-tight">Explore New Zealand online: a website guiding tourists to must-see spots, adventures, and unforgettable experiences.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">HTML</span>
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Tailwind CSS</span>
+              </div>
+              <div class="grid grid-cols-1 gap-2 mt-2">
+                <a href="https://github.com/Raevandhani/KiwiAdventures" target="_blank" class="text-center border border-indigo-600 hover:bg-indigo-500 py-2 rounded-md text-indigo-400 hover:text-white transition-all duration-300 font-semibold">
+                  <i class="ri-github-fill mr-1"></i> Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800 hover:cursor-pointer" x-data="{ category: 'ui/ux' }" x-show="activeFilter === 'all' || activeFilter === category">
+            <div class="relative overflow-hidden h-64 m-1 rounded-md">
+              <img src="../assets/uiux/multiwear.png" alt="finance" class="w-full h-full object-cover object-top">
+              <div class="absolute top-0 right-0 bg-red-600 text-white text-sm font-semibold px-6 py-1.5 rounded-bl-lg border-l-2 border-b-2 border-white/20">
+                UI/UX
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6 text-white">
+                  <h3 class="text-lg text-white font-bold mb-1">KiwiAdventures</h3>
+                  <p class="text-xs text-justify leading-tight">Explore New Zealand online: a website guiding tourists to must-see spots, adventures, and unforgettable experiences.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-gray-100 dark:bg-gray-900">
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs rounded-full">Figma</span>
+              </div>
+              <div class="grid grid-cols-1 gap-2 mt-2">
+                <a href="https://www.figma.com/design/jFPCMcJxA2xBt77yl8AsM6/MULTIWEAR?node-id=4-1&t=u6Sg90UdVYaEKBiW-1" target="_blank" class="text-center bg-indigo-600 hover:bg-indigo-800 py-2 rounded-md text-white transition-all duration-300 font-semibold">
                   <i class="ri-eye-line mr-1"></i> Preview
                 </a>
               </div>
